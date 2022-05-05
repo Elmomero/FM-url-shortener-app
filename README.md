@@ -23,28 +23,24 @@ Users should be able to:
 
 ![proyectImage](./public/images/page-screenshot.png)
 
-
 ### Links
 
-- Solution URL: [https://github.com/Elmomero/navigation-menu-app](https://github.com/Elmomero/navigation-menu-app)
-- Live Site URL: [https://elmomero.github.io/navigation-menu-app/](https://elmomero.github.io/navigation-menu-app/)
+- Solution URL: [https://github.com/Elmomero/FM-url-shortener-app](https://github.com/Elmomero/FM-url-shortener-app)
+- Live Site URL: [https://elmomero.github.io/FM-url-shortener-app/](https://elmomero.github.io/FM-url-shortener-app/)
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- TailwindCss
 - Flexbox
 - Mobile-first workflow
-- [React](https://reactjs.org/) - TS library
+- TS library
 
 ### What I learned
 
-I practiced building an app using vite, Typescript and 
-css modules , in which some animations have been applied.
+I learned how to combine vanilla typescript and TailwindCss to create a web application.
 
 ### Continued development
 
-I want to make proyects like this but using a css framework 
-like bootstrap to have a faster develoment
-
-
+I want to make proyects like this but using a Typescript framework
+like React to have a faster develoment
