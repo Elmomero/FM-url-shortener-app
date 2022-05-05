@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link shortener app</title>
+  </head>
+  <body
+    class="relative text-lg text-GrayishViolet font-spartan [width:100vw] min-h-screen md:px-12"
+  >
+    <header
+      class="fixed [width:100vw] top-0 left-0 flex justify-between items-center px-8 py-8 z-30 bg-White rounded-2xl"
+    >
+      <img src="./images/logo.svg" alt="logo" />
+
+      <i
+        id="menuButton"
+        class="fa-solid fa-bars text-3xl text-GrayishViolet cursor-pointer"
+        role="button"
+      ></i>
+    </header>
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 [width:100vw] z-30 px-8 mt-28 mb-6 h-0 scale-0 transition-all"
+    >
+      <div
+        id="menu-cont"
+        class="bg-DarkViolet text-GrayishViolet px-4 py-8 rounded-2xl flex flex-col"
+      >
+        <div id="smenu-1" class="flex flex-col">
+          <h4
+            class="text-center text-3xl font-semibold mt-2 lg:hover:text-VeryDarkBlue cursor-pointer"
+          >
+            Features
+          </h4>
+          <h4
+            class="text-center text-3xl font-semibold mt-2 lg:hover:text-VeryDarkBlue cursor-pointer"
+          >
+            Pricing
+          </h4>
+          <h4
+            class="text-center text-3xl font-semibold mt-2 lg:hover:text-VeryDarkBlue cursor-pointer"
+          >
+            Resources
+          </h4>
+        </div>
+        <div
+          id="smenu-2"
+          class="flex flex-col mt-3 border-t-2 border-GrayishViolet pt-4"
+        >
+          <button class="rounded-3xl p-3 text-3xl font-semibold">Login</button>
+          <button
+            class="rounded-3xl p-3 text-3xl font-semibold bg-Cyan hover:bg-LightCyan text-White"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main
+      id="main"
+      class="mt-28 md:[width:95%] lg:[width:85%] md:mr-auto md:ml-auto"
+    >
+      <article class="flex flex-col md:flex-row-reverse md:pr-8 [width:100%]">
+        <img
+          src="./images/illustration-working.svg"
+          alt="illustration-working"
+          class="block w-max md:[width:50%] object-cover md:object-scale-down"
+        />
+        <section
+          class="mt-6 px-8 flex flex-col md:[width:50%] items-center md:items-start"
+        >
+          <h1
+            class="text-5xl md:text-7xl text-VeryDarkViolet text-center md:text-left font-semibold"
+          >
+            More than shorter Links
+          </h1>
+          <h3 class="mt-4 text-center md:text-left text-xl">
+            Build your brands recognition and get detailed insigths on how your
+            links are performing
+          </h3>
+          <button
+            class="mt-6 text-xl p-4 bg-Cyan hover:bg-LightCyan text-White border-none rounded-lg"
+          >
+            Get Started
+          </button>
+        </section>
+      </article>
+      <div class="px-8">
+        <form
+          id="form"
+          class="md:[width:80%] ml-auto mr-auto rounded-2xl flex flex-col lg:flex-row lg:justify-evenly px-8 py-4 translate-y-1/2 bg-DarkViolet bg-[url('./images/bg-shorten-desktop.svg')]"
+        >
+          <input
+            type="text"
+            name="url_box"
+            id="linkText"
+            class="px-8 py-4 rounded-lg lg:[width:70%]"
+            placeholder="Shorten a link here"
+          />
+          <p id="errorMssg" class="p-3 text-sm text-Red"></p>
+          <button
+            id="shorterButton"
+            class="rounded-lg p-4 mt-4 lg:mt-0 bg-Cyan lg:[width:25%] text-White"
+          >
+            Shorten it!
+          </button>
+        </form>
+      </div>
+      <section
+        class="py-6 px-8 pb-24 mr-auto ml-auto bg-WhiteB text-GrayishViolet rounded-2xl"
+      >
+        <div
+          id="linksReducedElementsContainer"
+          class="[width:100%] mt-32 mb-16"
+        ></div>
+        <div class="lg:[width:40%] lg:mr-auto lg:ml-auto">
+          <h2 class="text-VeryDarkViolet text-4xl">Advanced Statistics</h2>
+          <p class="mt-4">
+            Track how your links are performed across the web with our advanced
+            statistics dashborad
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:[height:500px]">
+          <article
+            class="relative mt-12 bg-White p-6 rounded-2xl lg:self-start lg:mr-4"
+          >
+            <img
+              src="./images/icon-brand-recognition.svg"
+              alt="recognition"
+              class="absolute block w-16 h-16 top-0 left-0 right-0 m-auto -translate-y-1/2 bg-DarkViolet rounded-full object-scale-down"
+            />
+            <h4 class="mt-8 mb-4 text-4xl text-DarkViolet">
+              Brand recognition
+            </h4>
+            <p>
+              Boost your brand recognition with each click.Generic links dont
+              mean a thing. Branded links help instil confidence in your content
+            </p>
+          </article>
+          <article
+            class="relative mt-12 bg-White p-6 rounded-2xl lg:self-center lg:mr-4"
+          >
+            <img
+              src="./images/icon-detailed-records.svg"
+              alt="detailed records"
+              class="absolute block w-16 h-16 top-0 left-0 right-0 m-auto -translate-y-1/2 bg-DarkViolet rounded-full object-scale-down"
+            />
+            <!-- after:content-[''] after:block after:absolute after:top-0 after:right-1/2 after:w-1 after:h-4 after:bg-Cyan -->
+
+            <h4 class="mt-8 mb-4 text-4xl text-DarkViolet">Detailed records</h4>
+            <p>
+              Boost your brand recognition with each click.Generic links dont
+              mean a thing. Branded links help instil confidence in your content
+            </p>
+          </article>
+
+          <article class="relative mt-12 bg-White p-6 rounded-2xl lg:self-end">
+            <img
+              src="./images/icon-fully-customizable.svg"
+              alt="icon-fully-customizable"
+              class="absolute block w-16 h-16 top-0 left-0 right-0 m-auto -translate-y-1/2 bg-DarkViolet rounded-full object-scale-down"
+            />
+            <h4 class="mt-8 mb-4 text-4xl text-DarkViolet">
+              Fully customizable
+            </h4>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links supercharging audience engagement
+            </p>
+          </article>
+        </div>
+      </section>
+      <article
+        class="bg-[url('./images/bg-boost-desktop.svg')] bg-DarkViolet flex flex-col py-16"
+      >
+        <h3 class="text-center text-White text-4xl font-semibold">
+          Boost your Links Today
+        </h3>
+        <button
+          class="rounded-3xl p-8 py-3 mt-4 bg-Cyan text-White self-center font-semibold"
+        >
+          Get Started
+        </button>
+      </article>
+    </main>
+    <footer
+      id="footer"
+      class="flex flex-col lg:flex-row lg:items-center bg-VeryDarkBlue text-GrayishViolet py-8 md:[width:95%] md:mr-auto md:ml-auto lg:justify-evenly lg:[width:85%]"
+    >
+      <h3 class="text-center text-3xl text-Gray mb-6 lg:[width:30%]">
+        Shortly
+      </h3>
+      <div
+        class="flex flex-col lg:flex-row items-center lg:[width:30%] lg:justify-evenly"
+      >
+        <div class="mb-6 text-center">
+          <h4 class="font-semibold">Features</h4>
+          <p>Link Shortening</p>
+          <p>Branded Liks</p>
+          <p>Analitics</p>
+        </div>
+        <div class="mb-6 text-center">
+          <h4 class="font-semibold">Resources</h4>
+          <p>Blog</p>
+          <p>Developers</p>
+          <p>Support</p>
+        </div>
+        <div class="mb-6 text-center">
+          <h4 class="font-semibold">Company</h4>
+          <p>About</p>
+          <p>Our Team</p>
+          <p>Careers</p>
+          <p>Contact</p>
+        </div>
+      </div>
+      <figure class="flex w-2/5 justify-evenly ml-auto mr-auto lg:[width:30%]">
+        <img
+          src="./images/icon-facebook.svg"
+          alt="icon-facebook"
+          class="lg:w-5 lg:h-5"
+        />
+        <img
+          src="./images/icon-twitter.svg"
+          alt="icon-twitter"
+          class="lg:w-5 lg:h-5"
+        />
+        <img
+          src="./images/icon-pinterest.svg"
+          alt="icon-pinterest"
+          class="lg:w-5 lg:h-5"
+        />
+        <img
+          src="./images/icon-instagram.svg"
+          alt="icon-instagram"
+          class="lg:w-5 lg:h-5"
+        />
+      </figure>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
